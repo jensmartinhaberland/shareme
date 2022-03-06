@@ -1,7 +1,14 @@
-import "./App.css";
+import { Routes, Route, useNavigate } from "react-router-dom";
+import Home from "./container/Home";
+import Login from "./components/Login";
 
 function App() {
-  return <div className="text-3xl font-bold underline">Hello World!</div>;
+  return (
+    <Routes>
+      <Route path="login" element={<Login />} />
+      <Route path="/*" element={<Home />} />
+    </Routes>
+  );
 }
 
 export default App;
